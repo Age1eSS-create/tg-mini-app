@@ -1,0 +1,47 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.points {
+  color: #565cda;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  max-width: 350px;
+  padding: 0 5px;
+}
+
+.answers {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: .5rem;
+}
+
+.answer {
+  border: 1px solid #565cda;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.answer:hover {
+  background-color: #565cda;
+}
+
+.answer:active {
+  background-color: #565cda;
+}

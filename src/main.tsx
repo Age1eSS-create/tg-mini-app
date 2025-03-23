@@ -2,18 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import {init, miniApp} from "@telegram-apps/sdk";
+import {init, miniApp, miniAppReady, expandViewport} from "@telegram-apps/sdk";
 
 const initTelegram = () =>
 {
     try {
         init();
 
-        if (!miniApp.ready.isAvailable())
-            return;
-
-        miniApp.ready();
-        console.log("ready initTelegram")
+        if (miniAppReady.isAvailable()) {
+            miniApp.ready();
+            expandViewport();
+        }
     } catch (e) {
         console.error("Error initTelegram", e)
     }

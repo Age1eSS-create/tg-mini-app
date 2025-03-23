@@ -1,5 +1,5 @@
 import './App.css'
-import {initDataUser, miniApp, expandViewport} from "@telegram-apps/sdk";
+import {initDataUser} from "@telegram-apps/sdk";
 import {Questions} from "./pages/Questions.tsx";
 import {useEffect, useState} from "react";
 
@@ -7,9 +7,8 @@ function App() {
   const [userName, setUserName] = useState("Гость");
 
     useEffect((): void => {
-        expandViewport();
-        miniApp.setHeaderColor("#565cda");
-        setUserName(initDataUser.name);
+        const user = initDataUser.name;
+        setUserName(user || "Гость");
     }, []);
 
   return (

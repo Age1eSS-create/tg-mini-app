@@ -7,7 +7,6 @@ function App() {
   const [userName, setUserName] = useState("Гость");
 
     useEffect((): void => {
-        miniApp.ready();
         expandViewport();
         miniApp.setHeaderColor("#565cda");
         setUserName(initDataUser.name);

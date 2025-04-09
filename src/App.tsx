@@ -7,7 +7,7 @@ function App() {
 
     return (
         <>
-            <h1 className="title">Привет {userName ?? "Гость"}!</h1>
+            <h1 className="title">Привет, {userName ?? "Гость"}!</h1>
             <Questions />
         </>
     )

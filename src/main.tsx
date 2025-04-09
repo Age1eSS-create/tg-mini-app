@@ -19,7 +19,7 @@ const initTelegram = async () =>
     }
 }
 
-initTelegram().then(() => {
+initTelegram().then((): void => {
     createRoot(document.getElementById('root')!).render(
         <StrictMode>
             <App />

@@ -7,7 +7,7 @@ function App() {
   const [userName, setUserName] = useState("Гость");
 
   useEffect((): void => {
-      setUserName(initData.user.name || "Гость");
+      setUserName(initData.user()?.first_name || "Гость");
   }, []);
 
   return (

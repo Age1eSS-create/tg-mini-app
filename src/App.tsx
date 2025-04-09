@@ -1,18 +1,14 @@
 import './App.css'
-import {initData} from "@telegram-apps/sdk";
+import {initDataUser} from "@telegram-apps/sdk";
 import {Questions} from "./pages/Questions.tsx";
-import {useEffect, useState} from "react";
 
 function App() {
-  const [userName, setUserName] = useState("Гость");
+    const userName = initDataUser()?.username;
 
-  useEffect((): void => {
-      setUserName(initData.user()?.first_name || "Гость");
-  }, []);
 
   return (
     <>
-      <h1 className="title">Привет {userName}!</h1>
+      <h1 className="title">Привет {userName ?? "Гость"}!</h1>
       <Questions />
     </>
   )

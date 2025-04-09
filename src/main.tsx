@@ -12,6 +12,7 @@ const initTelegram = () =>
         if (miniAppReady.isAvailable()) {
             miniApp.ready();
             expandViewport();
+            miniApp.setHeaderColor('#565cda');
         }
     } catch (e) {
         console.error("Error initTelegram", e)

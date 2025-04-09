@@ -38,10 +38,10 @@
   transition: background-color 0.3s;
 }
 
-.answer:hover {
+.answer:active {
   background-color: #565cda;
 }
 
-.answer:active {
-  background-color: #565cda;
+.share {
+  background: #333763;
 }

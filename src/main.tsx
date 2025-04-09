@@ -4,10 +4,10 @@ import './index.css'
 import App from './App.tsx'
 import {init, miniApp, miniAppReady, expandViewport} from "@telegram-apps/sdk";
 
-const initTelegram = () =>
+const initTelegram = async () =>
 {
     try {
-        init();
+        await init();
 
         if (miniAppReady.isAvailable()) {
             miniApp.ready();
@@ -19,10 +19,10 @@ const initTelegram = () =>
     }
 }
 
-initTelegram()
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+initTelegram().then(() => {
+    createRoot(document.getElementById('root')!).render(
+        <StrictMode>
+            <App />
+        </StrictMode>
+    );
+});

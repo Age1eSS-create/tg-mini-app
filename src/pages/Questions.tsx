@@ -25,7 +25,7 @@ export const Questions = (): ReactElement => {
     }
 
     const onShare = () => {
-        shareURL("https://t.me/ReactRushBot", `Я прошёл тест и набрал ${score} очков! Попробуй и ты`)
+        shareURL("https://t.me/ReactRushBot", `У меня ${score} очков! Попробуй и ты!`)
     }
 
     return <div>
